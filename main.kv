@@ -1,0 +1,26 @@
+MDScreen:
+    name:"main"
+    MDFloatLayout:
+        Image:
+            source:"assests/bg.jpg"
+        Image:
+            id:wall
+            source:"assests/wall.jpg"
+            size:self.size
+            pos:20,-160
+        Image:
+            id:ball
+            source:"assests/ball.png"
+            size:self.size
+            #pos_hint:{'center_x':.5,'center_y':.7}
+            pos:20,300
+        MDLabel:
+            id:score
+            text:'assests/bg.jpg'
+            pos_hint:{"center_x":0.5,"center_y":0.8}
+        Button:
+            background_normal:"assests/normal.jpg"
+            background_down:"assests/down.jpg"
+            size_hint:.40,.20
+            pos_hint:{'center_x':.5}
+            on_press:app.upball(ball)
